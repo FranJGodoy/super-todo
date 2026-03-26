@@ -65,3 +65,15 @@ def task_toggle(request, id):
     task.save()
 
     return redirect('task_list')
+
+# TAREAS COMPLETADAS
+def tareas_completadas(request):
+    # Filtramos donde completada sea True
+    tareas = Task.objects.filter(completada=True)
+    return render(request, 'tasks/tasksCompleted.html', {'tareas': tareas})
+
+# TAREAAS PDENDIENTES
+def tareas_pendientes(request):
+    # Filtramos donde completada sea False
+    tareas = Task.objects.filter(completada=False)
+    return render(request, 'tasks/noCompleted.html', {'tareas': tareas})
