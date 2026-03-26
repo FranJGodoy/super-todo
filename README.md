@@ -25,23 +25,23 @@ Una aplicación de gestión de tareas sencilla y funcional construida con **Djan
    git clone [https://github.com/FranJGodoy/super-todo.git](https://github.com/FranJGodoy/super-todo.git)
    cd super-todo
 2. Crear y activar el entorno virtual:
-       Bash
+       (Bash)
        python -m venv .venv
        source .venv/bin/activate  # En Linux/Mac
 3. Instalar dependencias:
-       Bash
+       (Bash)
        pip install django
 4. Ejecutar migraciones:
-       Bash
+       (Bash)
        python manage.py migrate
 5. Iniciar el servidor:
-       Bash
+       (Bash)
        python manage.py runserver
        Visita http://127.0.0.1:8000/tasks/ en tu navegador.    
 📂 Estructura del Proyecto
-    • tasks/models.py: Definición del modelo Task (Nombre, Descripción, Slug, Completada).
-    • tasks/forms.py: Configuración del ModelForm con widgets de Bootstrap.
-    • tasks/views.py: Lógica de negocio (list, detail, create, edit, delete, toggle).
-    • tasks/templates/tasks/: Plantillas HTML para la interfaz de usuario.
+   • tasks/models.py: Definición del modelo Task (Nombre, Descripción, Slug, Completada).
+   • tasks/forms.py: Configuración del ModelForm con widgets de Bootstrap.
+   • tasks/views.py: Lógica de negocio (list, detail, create, edit, delete, toggle).
+   • tasks/templates/tasks/: Plantillas HTML para la interfaz de usuario.
 
 Creado por FranJGodoy - 2026
