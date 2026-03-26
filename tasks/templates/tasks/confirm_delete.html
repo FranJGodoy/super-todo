@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>¿Seguro que quieres borrar "{{ task.nombre }}"?</h2>
+
+<form method="POST">
+  {% csrf_token %}
+  <button type="submit" class="btn btn-danger">Sí, borrar</button>
+  <a href="{% url 'task_list' %}">Cancelar</a>
+</form>
+
+{% endblock %}

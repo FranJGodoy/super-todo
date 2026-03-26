@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<h1>SuperTODO</h1>
+<a href="{% url 'task_create' %}" class="btn btn-primary">Añadir tarea</a>
+
+<ul class="list-group mt-3">
+    {% for task in tasks %}
+    <li class="list-group-item d-flex justify-content-between align-items-center">
+        <span>
+            {% if task.completada %}
+                <span title="Completada">✅</span>
+                <strike>{{ task.nombre }}</strike>
+            {% else %}
+                <span title="Pendiente">❌</span>
+                {{ task.nombre }}
+            {% endif %}
+        </span>
+
+        <span>
+            <a href="{% url 'task_toggle' task.id %}" title="Cambiar estado de la tarea" class="text-decoration-none fs-5">
+                🔄
+            </a>
+            <a href="{% url 'task_edit' task.id %}" title="Editar esta tarea" class="text-decoration-none fs-5 ms-2">
+                ✏️
+            </a>
+            <a href="{% url 'task_detail' task.slug %}" title="Ver detalles" class="text-decoration-none fs-5 ms-2">
+                👁️
+            </a>
+            <a href="{% url 'task_delete' task.id %}" title="Eliminar tarea" class="text-decoration-none fs-5 ms-2">
+                🗑️
+            </a>
+        </span>
+    </li>
+    {% endfor %}
+</ul>
+{% endblock %}

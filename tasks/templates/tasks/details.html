@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>{{ task.nombre }}</h2>
+
+<p>{{ task.descripcion }}</p>
+
+<p>
+  Estado:
+  {% if task.completada %}
+    ✔ Completada
+  {% else %}
+    ✘ Pendiente
+  {% endif %}
+</p>
+
+<a href="{% url 'task_list' %}">Volver</a>
+{% endblock %}

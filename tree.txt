@@ -1,0 +1,52 @@
+.
+├── db.sqlite3
+├── main
+│   ├── asgi.py
+│   ├── __init__.py
+│   ├── __pycache__
+│   │   ├── __init__.cpython-313.pyc
+│   │   ├── settings.cpython-313.pyc
+│   │   ├── urls.cpython-313.pyc
+│   │   └── wsgi.cpython-313.pyc
+│   ├── settings.py
+│   ├── urls.py
+│   └── wsgi.py
+├── manage.py
+├── requirements.txt
+├── tasks
+│   ├── admin.py
+│   ├── apps.py
+│   ├── __init__.py
+│   ├── migrations
+│   │   ├── 0001_initial.py
+│   │   ├── __init__.py
+│   │   └── __pycache__
+│   │       ├── 0001_initial.cpython-313.pyc
+│   │       └── __init__.cpython-313.pyc
+│   ├── models.py
+│   ├── __pycache__
+│   │   ├── admin.cpython-313.pyc
+│   │   ├── apps.cpython-313.pyc
+│   │   ├── __init__.cpython-313.pyc
+│   │   ├── models.cpython-313.pyc
+│   │   ├── urls.cpython-313.pyc
+│   │   └── views.cpython-313.pyc
+│   ├── static
+│   │   ├── css
+│   │   │   └── bootstrap.min.css
+│   │   ├── icons
+│   │   └── js
+│   │       └── bootstrap.bundle.min.js
+│   ├── templates
+│   │   ├── base.html
+│   │   └── tasks
+│   │       ├── confirm_delete.html
+│   │       ├── detail.html
+│   │       ├── form.html
+│   │       └── index.html
+│   ├── tests.py
+│   ├── urls.py
+│   └── views.py
+└── tree.txt
+
+13 directories, 37 files
