@@ -77,3 +77,5 @@ def tareas_pendientes(request):
     # Filtramos donde completada sea False
     tareas = Task.objects.filter(completada=False)
     return render(request, 'tasks/noCompleted.html', {'tareas': tareas})
+
+# REQUISITO FUNCIONAL PDENDIENTE
